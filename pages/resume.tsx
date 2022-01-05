@@ -1,6 +1,6 @@
 const resume = () => {
     return (
-        <div>
+        <div className="px-5">
             Resume page
         </div>
     )
