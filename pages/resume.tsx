@@ -5,7 +5,7 @@ import { languages, tools } from "../data"
 
 const resume = () => {
 
-    return (<motion.div initial="initial" animate="animate" variants={routeAnimation} exit='exit'>
+    return (<motion.div initial="initial" animate="animate" variants={routeAnimation} exit="exit">
         <div className="px-5 grid md:grid-cols-2 gap-6 py-5">
             <motion.div className="education" initial="initial"
                 animate="animate"

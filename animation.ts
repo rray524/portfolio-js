@@ -6,11 +6,6 @@ export const fadeInUp = {
     animate: {
         opacity: 1,
         y: 0,
-        transition: {
-            duration: 0.4,
-            type: 'spring',
-            stiffness: 100,
-        }
     }
 }
 export const stagger = {
@@ -36,7 +31,7 @@ export const routeAnimation = {
         opacity: 0,
         transition: {
             delay: 0.1,
-            ease: 'easeInOut'
+            ease: "easeInOut"
         }
     },
 }

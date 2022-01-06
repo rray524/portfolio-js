@@ -24,7 +24,7 @@ const projects = () => {
         setActive(category);
     };
     return (
-        <motion.div className="px-5" initial="initial" exit='exit' animate="animate" variants={routeAnimation}>
+        <motion.div className="px-5" initial="initial" animate="animate" variants={routeAnimation} exit="exit">
             <div className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
                 <ProjectsNavbar
                     handlerFilterCategory={handlerFilterCategory}
