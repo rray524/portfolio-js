@@ -5,7 +5,7 @@ import { routeAnimation, stagger } from "../animation";
 import ProjectCard from "../components/ProjectCard"
 import ProjectsNavbar from "../components/ProjectsNavbar";
 import { projects as projectsData } from "../data";
-import { Category, Project } from "../type";
+import { Category, IProject } from "../type";
 
 const projects = () => {
     const [projects, setProjects] = useState(projectsData);
