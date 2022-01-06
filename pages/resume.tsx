@@ -1,8 +1,43 @@
+import Bar from "../components/Bar"
+import { languages, tools } from "../data"
+
 const resume = () => {
-    return (
-        <div className="px-5">
-            Resume page
+    return (<>
+        <div className="px-5 grid md:grid-cols-2 gap-6 py-5">
+            <div className="education">
+                <h5 className="text-2xl font-bold">Education</h5>
+                <p>B.sc in Computer Science & Engineering</p>
+                <p>I have passed my undergraduate degree in 2017</p>
+            </div>
+            <div className="experience">
+                <h5 className="text-2xl font-bold">Experience</h5>
+                <p>Wordpress theme & plugin developer</p>
+                <p>I have worked as freelance developer since 2014</p>
+            </div>
         </div>
+        <div className="px-5 grid md:grid-cols-2 gap-6 py-5">
+            <div className="language">
+                <h5 className="text-2xl font-bold">Languages</h5>
+                <div className="my-2">
+                    {
+                        languages.map((language, idx) => (
+                            <Bar value={language} key={idx} />
+                        ))
+                    }
+                </div>
+            </div>
+            <div className="softwares">
+                <h5 className="text-2xl font-bold">Tools & Softwares</h5>
+                <div className="my-2">
+                    {
+                        tools.map((tool, idx) => (
+                            <Bar value={tool} key={idx} />
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </>
     )
 }
 

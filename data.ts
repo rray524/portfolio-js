@@ -2,7 +2,8 @@ import { RiComputerLine } from "react-icons/ri";
 import { FaServer } from "react-icons/fa";
 import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
-import { Service } from "./type";
+import { Service, Skill } from "./type";
+import { BsCircleFill } from "react-icons/bs";
 
 export const services: Service[] = [
     {
@@ -39,5 +40,61 @@ export const services: Service[] = [
         title: "Whatever",
         about:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!",
+    },
+];
+
+export const languages: Skill[] = [
+    {
+        Icon: BsCircleFill,
+        name: "React",
+        level: "45",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Java Script",
+        level: "60",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "React Native",
+        level: "80",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Next.js",
+        level: "70",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "MongoDB",
+        level: "80",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Node",
+        level: "80",
+    },
+];
+
+export const tools: Skill[] = [
+    {
+        Icon: BsCircleFill,
+        name: "Figma",
+        level: "85",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Photoshop",
+        level: "45",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "VS Code",
+        level: "60",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Github",
+        level: "45",
     },
 ];
