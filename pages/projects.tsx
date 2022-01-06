@@ -5,7 +5,7 @@ import { routeAnimation, stagger } from "../animation";
 import ProjectCard from "../components/ProjectCard"
 import ProjectsNavbar from "../components/ProjectsNavbar";
 import { projects as projectsData } from "../data";
-import { Category } from "../type";
+import { Category, Project } from "../type";
 
 const projects = () => {
     const [projects, setProjects] = useState(projectsData);
@@ -32,9 +32,9 @@ const projects = () => {
                 />
 
                 <motion.div initial="initial" animate="animate" variants={stagger} className="relative grid grid-cols-12 gap-4 my-3">
-                    {projectsData.map((project, idx) => (
-                        <div className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200" key={idx}>
-                            <ProjectCard project={project} />
+                    {projects.map((project, idx) => (
+                        <div className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
+                            <ProjectCard project={project} key={idx} />
                         </div>
                     ))}
                 </motion.div>

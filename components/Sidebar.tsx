@@ -17,7 +17,7 @@ const Sidebar = () => {
             <h1 className="text-3xl font-bold pt-1 lg:pt-3 font-kaushan">Rahul Ray</h1>
             <div className="bio-details pt-5 lg:pt-9 dark:bg-dark-200 dark:bg-black-500">
                 <h4 className="rounded-full bg-gray-200 py-4">Full Stack Developer</h4>
-                <a href="#">
+                <a href="https://drive.google.com/file/d/1J6m75jJI6zivVSaU-efshI8mgfImg_-J/view" rel="noreferrer" target="_blank">
                     <div className="resume flex items-center justify-center rounded-full bg-gray-200 py-4 mt-3">
                         <GiTie className="w-5 h-5" />
                         <h4> <span>Download Resume</span></h4>
