@@ -1,5 +1,6 @@
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
+import { fadeInUp } from '../animation'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import '../styles/globals.css'
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps, router }) {
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
-        <p className='text-center my-5'>Copyright © 2022 rahul</p>
+        <motion.div className='text-center my-5 text-sm' initial="initial" animate="animate" variants={fadeInUp}>Copyright © 2022 rahul</motion.div>
       </div>
     </div>
   </ThemeProvider>
