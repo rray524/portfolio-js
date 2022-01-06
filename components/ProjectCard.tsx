@@ -4,10 +4,11 @@ import { FunctionComponent, useState } from "react";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { fadeInUp, stagger } from "../animation";
-import { Project } from "../type";
+import { IProject } from "../type";
+
 
 const ProjectCard: FunctionComponent<{
-    project: Project
+    project: IProject
 }> = ({
     project: {
         name,

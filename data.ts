@@ -2,7 +2,7 @@ import { RiComputerLine } from "react-icons/ri";
 import { FaServer } from "react-icons/fa";
 import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
-import { Service, Skill } from "./type";
+import { IProject, Service, Skill } from "./type";
 import { BsCircleFill } from "react-icons/bs";
 
 export const services: Service[] = [
@@ -99,7 +99,7 @@ export const tools: Skill[] = [
     },
 ];
 
-export const projects: Project[] = [
+export const projects: IProject[] = [
     {
         name: "COVID Tracker",
         description:
@@ -156,7 +156,7 @@ export const projects: Project[] = [
         image_path: "/images/tweetme.jpg",
         deployed_url: "http://sumaxtweetme.pythonanywhere.com/",
         github_url: "https://github.com/Dey-Sumit/tweetme",
-        category: ["django", "react"],
+        category: ["next.js", "react"],
         description:
             "First Django Project :) | Typical Social Media App where one can post,like ,comment etc",
         key_techs: ["React", "Django", "Django REST API"],

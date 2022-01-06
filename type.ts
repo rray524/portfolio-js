@@ -11,7 +11,7 @@ export interface Skill {
     name: string;
     level: string;
 }
-export interface Project {
+export interface IProject {
     name: string;
     description: string;
     image_path: string;

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion"
+import { GetServerSideProps, GetServerSidePropsContext } from "next"
 import { routeAnimation, stagger } from "../animation"
 import ServiceCard from "../components/ServiceCard"
 import { services } from "../data"
 
-const index = () => {
+const index = ({ endpoint }) => {
   return (
     <motion.div className="px-5" initial="initial" animate="animate" variants={routeAnimation} exit="exit">
       <p>I build one pager component based React UI application. I am relying on Firebase for USER authentication. I use node.js server on the Back End and host this to Heroku. I use MongoDB to store data on database and find them on client side through REST API.</p>
@@ -19,4 +20,12 @@ const index = () => {
   )
 }
 
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  // const res = await fetch('http://localhost:3000/api/services')
+  // const data = await res.json()
+  // console.log(data)
+  return { props: { endpoint: process.env.VERCEL_URL } }
+}
 export default index
