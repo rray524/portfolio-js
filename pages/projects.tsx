@@ -7,7 +7,7 @@ import ProjectsNavbar from "../components/ProjectsNavbar";
 import { projects as projectsData } from "../data";
 import { Category, IProject } from "../type";
 
-const projects = () => {
+const Projects = () => {
     const [projects, setProjects] = useState(projectsData);
     const [active, setActive] = useState("all");
     const handlerFilterCategory = (category: Category | "all") => {
@@ -33,8 +33,8 @@ const projects = () => {
 
                 <motion.div initial="initial" animate="animate" variants={stagger} className="relative grid grid-cols-12 gap-4 my-3">
                     {projects.map((project, idx) => (
-                        <div className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
-                            <ProjectCard project={project} key={idx} />
+                        <div key={idx} className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
+                            <ProjectCard project={project} />
                         </div>
                     ))}
                 </motion.div>
@@ -43,4 +43,4 @@ const projects = () => {
     )
 }
 
-export default projects
+export default Projects

@@ -4,7 +4,7 @@ import { routeAnimation, stagger } from "../animation"
 import ServiceCard from "../components/ServiceCard"
 import { services } from "../data"
 
-const index = ({ endpoint }) => {
+const Index = ({ endpoint }) => {
   return (
     <motion.div className="px-5" initial="initial" animate="animate" variants={routeAnimation} exit="exit">
       <p>I build one pager component based React UI application. I am relying on Firebase for USER authentication. I use node.js server on the Back End and host this to Heroku. I use MongoDB to store data on database and find them on client side through REST API.</p>
@@ -28,4 +28,4 @@ export const getServerSideProps: GetServerSideProps = async (
   // console.log(data)
   return { props: { endpoint: process.env.VERCEL_URL } }
 }
-export default index
+export default Index

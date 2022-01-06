@@ -2,6 +2,7 @@
 import { GiTie } from "react-icons/gi";
 import { FaLocationArrow, FaGithub, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const Sidebar = () => {
     const { theme, setTheme } = useTheme();
@@ -12,7 +13,7 @@ const Sidebar = () => {
     return (
         <div>
             <div className="img">
-                <img className="w-32 h-32 rounded-full mx-auto" src="https://rahul-wp.com/wp-content/uploads/2021/11/me3.jpg" alt="img avatar" />
+                <Image className="w-32 h-32 rounded-full mx-auto" src="https://rahul-wp.com/wp-content/uploads/2021/11/me3.jpg" alt="img avatar" />
             </div>
             <h1 className="text-3xl font-bold pt-1 lg:pt-3 font-kaushan">Rahul Ray</h1>
             <div className="bio-details pt-5 lg:pt-9 dark:bg-dark-200 dark:bg-black-500">
@@ -32,7 +33,7 @@ const Sidebar = () => {
             <div className='address py-5 lg:py-6 bg-gray-200 dark:bg-dark-200 dark:bg-black-500' style={{ marginLeft: '-1rem', marginRight: "-1rem" }}>
                 <div className="location flex items-center justify-center space-x-2">
                     <FaLocationArrow className="w-5 h-5" />
-                    <h6 className=""> Kolkata, India</h6>
+                    <h6 className=""> Khulna, Bangladesh</h6>
                 </div>
                 <h6 className="">rray524@gmail.com</h6>
                 <h6 className="">123456789</h6>
