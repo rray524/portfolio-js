@@ -3,6 +3,12 @@ import { Skill } from "../type"
 
 const Bar: FunctionComponent<{ value: Skill }> = ({ value: { Icon, name, level } }) => {
     const bar_width = `${level}%`;
+
+    const variants = {
+        initial: {
+            width: 0,
+        }
+    }
     return (
         <div className="my-2 text-white bg-gray-300 rounded-full">
             <div
