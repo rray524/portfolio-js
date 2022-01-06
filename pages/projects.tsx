@@ -1,5 +1,7 @@
 
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { routeAnimation, stagger } from "../animation";
 import ProjectCard from "../components/ProjectCard"
 import ProjectsNavbar from "../components/ProjectsNavbar";
 import { projects as projectsData } from "../data";
@@ -22,22 +24,22 @@ const projects = () => {
         setActive(category);
     };
     return (
-        <div className="px-5">
+        <motion.div className="px-5" initial="initial" exit='exit' animate="animate" variants={routeAnimation}>
             <div className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
                 <ProjectsNavbar
                     handlerFilterCategory={handlerFilterCategory}
                     active={active}
                 />
 
-                <div className="relative grid grid-cols-12 gap-4 my-3">
+                <motion.div initial="initial" animate="animate" variants={stagger} className="relative grid grid-cols-12 gap-4 my-3">
                     {projectsData.map((project, idx) => (
                         <div className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200" key={idx}>
                             <ProjectCard project={project} />
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

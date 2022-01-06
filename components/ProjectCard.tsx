@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FunctionComponent, useState } from "react";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
+import { fadeInUp, stagger } from "../animation";
 import { Project } from "../type";
 
 const ProjectCard: FunctionComponent<{
@@ -20,7 +22,7 @@ const ProjectCard: FunctionComponent<{
         const [showDetail, setShowDetail] = useState(false);
 
         return (
-            <div>
+            <motion.div variants={fadeInUp}>
                 <Image
                     src={image_path}
                     alt={name}
@@ -34,8 +36,8 @@ const ProjectCard: FunctionComponent<{
                 <p className="my-2 text-center">{name}</p>
 
                 {showDetail && (
-                    <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
-                        <div>
+                    <motion.div initial="initial" animate="animate" variants={stagger} className="absolute top-10 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
+                        <motion.div variants={fadeInUp}>
                             {/* <img src={image_path} alt={name} /> */}
 
                             <Image
@@ -59,9 +61,9 @@ const ProjectCard: FunctionComponent<{
                                     <AiFillProject /> <span>Project</span>
                                 </a>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div>
+                        <motion.div variants={fadeInUp}>
                             <h2 className="mb-3 text-xl font-medium md:text-2xl">{name}</h2>
                             <h3 className="mb-3 font-medium">{description}</h3>
 
@@ -75,7 +77,7 @@ const ProjectCard: FunctionComponent<{
                                     </span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
 
                         <button
                             onClick={() => setShowDetail(false)}
@@ -83,9 +85,9 @@ const ProjectCard: FunctionComponent<{
                         >
                             <MdClose size={30} />
                         </button>
-                    </div>
+                    </motion.div>
                 )}
-            </div>
+            </motion.div>
         );
     };
 
