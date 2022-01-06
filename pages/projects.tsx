@@ -33,7 +33,7 @@ const Projects = () => {
 
                 <motion.div initial="initial" animate="animate" variants={stagger} className="relative grid grid-cols-12 gap-4 my-3">
                     {projects.map((project, idx) => (
-                        <div key={idx} className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
+                        <div key={idx} className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-100">
                             <ProjectCard project={project} />
                         </div>
                     ))}
