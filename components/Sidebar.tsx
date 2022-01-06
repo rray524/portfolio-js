@@ -13,7 +13,7 @@ const Sidebar = () => {
     return (
         <div>
             <div className="img">
-                <Image className="w-32 h-32 rounded-full mx-auto" src="https://rahul-wp.com/wp-content/uploads/2021/11/me3.jpg" alt="img avatar" />
+                <img className="w-32 h-32 rounded-full mx-auto" src="https://rahul-wp.com/wp-content/uploads/2021/11/me3.jpg" alt="img avatar" />
             </div>
             <h1 className="text-3xl font-bold pt-1 lg:pt-3 font-kaushan">Rahul Ray</h1>
             <div className="bio-details pt-5 lg:pt-9 dark:bg-dark-200 dark:bg-black-500">
